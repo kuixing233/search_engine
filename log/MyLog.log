@@ -1,0 +1,7 @@
+2024-07-24 14:37:36,711 MyCategory [INFO] [main.cc:main:5] Hello, world!
+2024-07-24 14:38:05,003 MyCategory [INFO] [main.cc:main:5] Hello, world!
+2024-07-24 14:38:53,537 MyCategory [INFO] [main.cc:main:5] Hello, world!
+2024-07-24 14:44:55,491 MyCategory [INFO] [main.cc:main:5] Hello, world!
+2024-07-24 14:56:27,959 MyCategory [INFO] [main.cc:main:6] Hello, world!
+2024-07-24 17:05:15,979 MyCategory [DEBUG] [/home/ario/cpp-learning/Projects/search_engine/src/offline/offline.cc:main:6] Hello, world!
+2024-07-24 17:21:16,772 MyCategory [DEBUG] [/home/ario/cpp-learning/Projects/search_engine/src/offline/offline.cc:main:6] Hello, world!
