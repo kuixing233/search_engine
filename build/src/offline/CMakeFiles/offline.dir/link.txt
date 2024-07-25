@@ -1,1 +1,0 @@
-/usr/bin/c++  -g -g  -rdynamic CMakeFiles/offline.dir/offline.cc.o CMakeFiles/offline.dir/__/ConfigMgr.cc.o CMakeFiles/offline.dir/__/LogMgr.cc.o  -o ../../../bin/offline -lboost_system -llog4cpp -lpthread 

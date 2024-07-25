@@ -1,5 +1,12 @@
 #include "ConfigMgr.h"
 
+// boost库中读取ini配置文件的头文件
+#include <boost/filesystem.hpp>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/ini_parser.hpp>
+
+#include <iostream>
+
 ConfigMgr::ConfigMgr()
 {
 	std::cout << "ConfigMgr()" << std::endl;
@@ -32,7 +39,8 @@ ConfigMgr::ConfigMgr()
 	}
 
 	// 输出所有的section和key-value对
-	std::cout << "config.ini: " << std::endl;
+	std::cout << "-----------------------------------------------------------\n";
+	std::cout << "Config path: " << config_path << std::endl;
 	for (const auto &section_entry : _config_map)
 	{
 		const std::string &section_name = section_entry.first;
@@ -43,6 +51,7 @@ ConfigMgr::ConfigMgr()
 			std::cout << key_value_pair.first << "=" << key_value_pair.second << std::endl;
 		}
 	}
+	std::cout << "-----------------------------------------------------------\n";
 }
 
 ConfigMgr::~ConfigMgr()

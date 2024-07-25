@@ -1,4 +1,4 @@
-# Install script for directory: /home/ario/cpp-learning/Projects/search_engine/src
+# Install script for directory: /home/ario/Projects_git/search_engine/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ario/cpp-learning/Projects/search_engine/build/src/offline/cmake_install.cmake")
+  include("/home/ario/Projects_git/search_engine/build/src/keyrec/cmake_install.cmake")
 
 endif()
 

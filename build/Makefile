@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ario/cpp-learning/Projects/search_engine
+CMAKE_SOURCE_DIR = /home/ario/Projects_git/search_engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ario/cpp-learning/Projects/search_engine/build
+CMAKE_BINARY_DIR = /home/ario/Projects_git/search_engine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp-learning/Projects/search_engine/build/CMakeFiles /home/ario/cpp-learning/Projects/search_engine/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/Projects_git/search_engine/build/CMakeFiles /home/ario/Projects_git/search_engine/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/cpp-learning/Projects/search_engine/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/Projects_git/search_engine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named offline
+# Target rules for targets named keyrec
 
 # Build rule for target.
-offline: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 offline
-.PHONY : offline
+keyrec: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyrec
+.PHONY : keyrec
 
 # fast build rule for target.
-offline/fast:
-	$(MAKE) -f src/offline/CMakeFiles/offline.dir/build.make src/offline/CMakeFiles/offline.dir/build
-.PHONY : offline/fast
+keyrec/fast:
+	$(MAKE) -f src/keyrec/CMakeFiles/keyrec.dir/build.make src/keyrec/CMakeFiles/keyrec.dir/build
+.PHONY : keyrec/fast
 
 # Help Target
 help:
@@ -131,7 +131,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... offline"
+	@echo "... keyrec"
 .PHONY : help
 
 
