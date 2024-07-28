@@ -7,10 +7,14 @@
 class SplitTool
 {
 public:
-    SplitTool();
-    virtual ~SplitTool();
+    SplitTool() {
+
+    }
+    virtual ~SplitTool() {
+        
+    }
     
-    virtual const std::vector<std::string> cut(const std::string &str) = 0;
+    virtual std::vector<std::string> cut(const std::string &str) = 0;
 };
 
 #endif

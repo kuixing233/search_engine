@@ -63,72 +63,54 @@ CMAKE_BINARY_DIR = /home/ario/Projects_git/search_engine/build
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
-src/all: src/keyrec/all
+src/all: src/CMakeFiles/server.dir/all
 
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
-src/clean: src/keyrec/clean
+src/clean: src/CMakeFiles/server.dir/clean
 
 .PHONY : src/clean
 
 # Convenience name for "preinstall" pass in the directory.
-src/preinstall: src/keyrec/preinstall
+src/preinstall:
 
 .PHONY : src/preinstall
 
 #=============================================================================
-# Directory level rules for directory src/keyrec
-
-# Convenience name for "all" pass in the directory.
-src/keyrec/all: src/keyrec/CMakeFiles/keyrec.dir/all
-
-.PHONY : src/keyrec/all
-
-# Convenience name for "clean" pass in the directory.
-src/keyrec/clean: src/keyrec/CMakeFiles/keyrec.dir/clean
-
-.PHONY : src/keyrec/clean
-
-# Convenience name for "preinstall" pass in the directory.
-src/keyrec/preinstall:
-
-.PHONY : src/keyrec/preinstall
-
-#=============================================================================
-# Target rules for target src/keyrec/CMakeFiles/keyrec.dir
+# Target rules for target src/CMakeFiles/server.dir
 
 # All Build rule for target.
-src/keyrec/CMakeFiles/keyrec.dir/all:
-	$(MAKE) -f src/keyrec/CMakeFiles/keyrec.dir/build.make src/keyrec/CMakeFiles/keyrec.dir/depend
-	$(MAKE) -f src/keyrec/CMakeFiles/keyrec.dir/build.make src/keyrec/CMakeFiles/keyrec.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/Projects_git/search_engine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23 "Built target keyrec"
-.PHONY : src/keyrec/CMakeFiles/keyrec.dir/all
+src/CMakeFiles/server.dir/all:
+	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/depend
+	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ario/Projects_git/search_engine/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27 "Built target server"
+.PHONY : src/CMakeFiles/server.dir/all
 
 # Include target in all.
-all: src/keyrec/CMakeFiles/keyrec.dir/all
+all: src/CMakeFiles/server.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-src/keyrec/CMakeFiles/keyrec.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/Projects_git/search_engine/build/CMakeFiles 23
-	$(MAKE) -f CMakeFiles/Makefile2 src/keyrec/CMakeFiles/keyrec.dir/all
+src/CMakeFiles/server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/Projects_git/search_engine/build/CMakeFiles 27
+	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ario/Projects_git/search_engine/build/CMakeFiles 0
-.PHONY : src/keyrec/CMakeFiles/keyrec.dir/rule
+.PHONY : src/CMakeFiles/server.dir/rule
 
 # Convenience name for target.
-keyrec: src/keyrec/CMakeFiles/keyrec.dir/rule
+server: src/CMakeFiles/server.dir/rule
 
-.PHONY : keyrec
-
-# clean rule for target.
-src/keyrec/CMakeFiles/keyrec.dir/clean:
-	$(MAKE) -f src/keyrec/CMakeFiles/keyrec.dir/build.make src/keyrec/CMakeFiles/keyrec.dir/clean
-.PHONY : src/keyrec/CMakeFiles/keyrec.dir/clean
+.PHONY : server
 
 # clean rule for target.
-clean: src/keyrec/CMakeFiles/keyrec.dir/clean
+src/CMakeFiles/server.dir/clean:
+	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/clean
+.PHONY : src/CMakeFiles/server.dir/clean
+
+# clean rule for target.
+clean: src/CMakeFiles/server.dir/clean
 
 .PHONY : clean
 

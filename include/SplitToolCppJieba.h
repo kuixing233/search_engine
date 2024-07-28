@@ -14,7 +14,7 @@ public:
     friend class Singleton<SplitToolCppJieba>;
 
     ~SplitToolCppJieba() override;
-    const std::vector<std::string> cut(const std::string& str) override;
+    std::vector<std::string> cut(const std::string& str) override;
 
 private:
     SplitToolCppJieba();

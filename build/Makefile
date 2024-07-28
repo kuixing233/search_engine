@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named keyrec
+# Target rules for targets named server
 
 # Build rule for target.
-keyrec: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 keyrec
-.PHONY : keyrec
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-keyrec/fast:
-	$(MAKE) -f src/keyrec/CMakeFiles/keyrec.dir/build.make src/keyrec/CMakeFiles/keyrec.dir/build
-.PHONY : keyrec/fast
+server/fast:
+	$(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 # Help Target
 help:
@@ -131,7 +131,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... keyrec"
+	@echo "... server"
 .PHONY : help
 
 

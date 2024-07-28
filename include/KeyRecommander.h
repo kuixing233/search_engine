@@ -5,20 +5,18 @@
 #include <queue>
 #include <set>
 #include <vector>
+#include <unordered_map>
 
-#include "Dictionary.h"
-#include "TcpConnection.h"
+#include "Singleton.h"
 
-class CandidateResult 
+class CandidateResult
 {
-    friend bool operator < (const CandidateResult& lhs, const CandidateResult& rhs);
-public:
-    CandidateResult(const std::string& word, int freq, int dist)
-        : _word(word)
-        , _freq(freq)
-        , _dist(dist)
-    {
+    friend bool operator<(const CandidateResult &lhs, const CandidateResult &rhs);
 
+public:
+    CandidateResult(const std::string &word, int freq, int dist)
+        : _word(word), _freq(freq), _dist(dist)
+    {
     }
 
 public:
@@ -28,21 +26,23 @@ public:
 };
 
 class KeyRecommander
+    : public Singleton<KeyRecommander>
 {
+    friend Singleton<KeyRecommander>;
 public:
-    KeyRecommander(const std::string & query, const TcpConnectionPtr & conn);
-    KeyRecommander(const std::string & query);
-    void execute();                                 // 执行查询
+    std::string doQuery(std::string queryWord); // 执行查询
 
 private:
-    void response();                                // 响应客户端的请求
-    void queryIndextable();                         // 查询索引
-    int distance(const std::string & rhs);          // 计算最小编辑距离
+    void loadLibray();
+    bool queryIndextable(std::string queryWord, std::priority_queue<CandidateResult> &resultQue);          // 查询索引
+    std::string createRetJsonStr(std::priority_queue<CandidateResult> &resultQue); // 响应客户端的请求
+    std::string returnNoAnswer();
 
 private:
-    std::string _queryWord;                                                     // 等待查询的单词
-    TcpConnectionPtr _conn;                                                     // 与客户端进行连接的文件描述符
-    std::priority_queue<CandidateResult, std::vector<CandidateResult>> _resultQue;      // 保存候选结果集的优先队列
+    KeyRecommander();
+
+    std::vector<std::pair<std::string, int>> _dict;             // 词典
+    std::unordered_map<std::string, std::set<int>> _index;      // 索引表
 };
 
 #endif

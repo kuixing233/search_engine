@@ -110,6 +110,723 @@ depend:
 	cd /home/ario/Projects_git/search_engine/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/CMakeFiles/server.dir/rule:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/server.dir/rule
+.PHONY : src/CMakeFiles/server.dir/rule
+
+# Convenience name for target.
+server: src/CMakeFiles/server.dir/rule
+
+.PHONY : server
+
+# fast build rule for target.
+server/fast:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/build
+.PHONY : server/fast
+
+Key/DictProducer.o: Key/DictProducer.cc.o
+
+.PHONY : Key/DictProducer.o
+
+# target to build an object file
+Key/DictProducer.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Key/DictProducer.cc.o
+.PHONY : Key/DictProducer.cc.o
+
+Key/DictProducer.i: Key/DictProducer.cc.i
+
+.PHONY : Key/DictProducer.i
+
+# target to preprocess a source file
+Key/DictProducer.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Key/DictProducer.cc.i
+.PHONY : Key/DictProducer.cc.i
+
+Key/DictProducer.s: Key/DictProducer.cc.s
+
+.PHONY : Key/DictProducer.s
+
+# target to generate assembly for a file
+Key/DictProducer.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Key/DictProducer.cc.s
+.PHONY : Key/DictProducer.cc.s
+
+Key/KeyRecommander.o: Key/KeyRecommander.cc.o
+
+.PHONY : Key/KeyRecommander.o
+
+# target to build an object file
+Key/KeyRecommander.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Key/KeyRecommander.cc.o
+.PHONY : Key/KeyRecommander.cc.o
+
+Key/KeyRecommander.i: Key/KeyRecommander.cc.i
+
+.PHONY : Key/KeyRecommander.i
+
+# target to preprocess a source file
+Key/KeyRecommander.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Key/KeyRecommander.cc.i
+.PHONY : Key/KeyRecommander.cc.i
+
+Key/KeyRecommander.s: Key/KeyRecommander.cc.s
+
+.PHONY : Key/KeyRecommander.s
+
+# target to generate assembly for a file
+Key/KeyRecommander.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Key/KeyRecommander.cc.s
+.PHONY : Key/KeyRecommander.cc.s
+
+Public/ConfigMgr.o: Public/ConfigMgr.cc.o
+
+.PHONY : Public/ConfigMgr.o
+
+# target to build an object file
+Public/ConfigMgr.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/ConfigMgr.cc.o
+.PHONY : Public/ConfigMgr.cc.o
+
+Public/ConfigMgr.i: Public/ConfigMgr.cc.i
+
+.PHONY : Public/ConfigMgr.i
+
+# target to preprocess a source file
+Public/ConfigMgr.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/ConfigMgr.cc.i
+.PHONY : Public/ConfigMgr.cc.i
+
+Public/ConfigMgr.s: Public/ConfigMgr.cc.s
+
+.PHONY : Public/ConfigMgr.s
+
+# target to generate assembly for a file
+Public/ConfigMgr.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/ConfigMgr.cc.s
+.PHONY : Public/ConfigMgr.cc.s
+
+Public/DirScanner.o: Public/DirScanner.cc.o
+
+.PHONY : Public/DirScanner.o
+
+# target to build an object file
+Public/DirScanner.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/DirScanner.cc.o
+.PHONY : Public/DirScanner.cc.o
+
+Public/DirScanner.i: Public/DirScanner.cc.i
+
+.PHONY : Public/DirScanner.i
+
+# target to preprocess a source file
+Public/DirScanner.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/DirScanner.cc.i
+.PHONY : Public/DirScanner.cc.i
+
+Public/DirScanner.s: Public/DirScanner.cc.s
+
+.PHONY : Public/DirScanner.s
+
+# target to generate assembly for a file
+Public/DirScanner.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/DirScanner.cc.s
+.PHONY : Public/DirScanner.cc.s
+
+Public/LogMgr.o: Public/LogMgr.cc.o
+
+.PHONY : Public/LogMgr.o
+
+# target to build an object file
+Public/LogMgr.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/LogMgr.cc.o
+.PHONY : Public/LogMgr.cc.o
+
+Public/LogMgr.i: Public/LogMgr.cc.i
+
+.PHONY : Public/LogMgr.i
+
+# target to preprocess a source file
+Public/LogMgr.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/LogMgr.cc.i
+.PHONY : Public/LogMgr.cc.i
+
+Public/LogMgr.s: Public/LogMgr.cc.s
+
+.PHONY : Public/LogMgr.s
+
+# target to generate assembly for a file
+Public/LogMgr.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/LogMgr.cc.s
+.PHONY : Public/LogMgr.cc.s
+
+Public/SplitToolCppJieba.o: Public/SplitToolCppJieba.cc.o
+
+.PHONY : Public/SplitToolCppJieba.o
+
+# target to build an object file
+Public/SplitToolCppJieba.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/SplitToolCppJieba.cc.o
+.PHONY : Public/SplitToolCppJieba.cc.o
+
+Public/SplitToolCppJieba.i: Public/SplitToolCppJieba.cc.i
+
+.PHONY : Public/SplitToolCppJieba.i
+
+# target to preprocess a source file
+Public/SplitToolCppJieba.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/SplitToolCppJieba.cc.i
+.PHONY : Public/SplitToolCppJieba.cc.i
+
+Public/SplitToolCppJieba.s: Public/SplitToolCppJieba.cc.s
+
+.PHONY : Public/SplitToolCppJieba.s
+
+# target to generate assembly for a file
+Public/SplitToolCppJieba.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/SplitToolCppJieba.cc.s
+.PHONY : Public/SplitToolCppJieba.cc.s
+
+Public/StopWords.o: Public/StopWords.cc.o
+
+.PHONY : Public/StopWords.o
+
+# target to build an object file
+Public/StopWords.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/StopWords.cc.o
+.PHONY : Public/StopWords.cc.o
+
+Public/StopWords.i: Public/StopWords.cc.i
+
+.PHONY : Public/StopWords.i
+
+# target to preprocess a source file
+Public/StopWords.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/StopWords.cc.i
+.PHONY : Public/StopWords.cc.i
+
+Public/StopWords.s: Public/StopWords.cc.s
+
+.PHONY : Public/StopWords.s
+
+# target to generate assembly for a file
+Public/StopWords.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/StopWords.cc.s
+.PHONY : Public/StopWords.cc.s
+
+Reactor/Acceptor.o: Reactor/Acceptor.cc.o
+
+.PHONY : Reactor/Acceptor.o
+
+# target to build an object file
+Reactor/Acceptor.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Acceptor.cc.o
+.PHONY : Reactor/Acceptor.cc.o
+
+Reactor/Acceptor.i: Reactor/Acceptor.cc.i
+
+.PHONY : Reactor/Acceptor.i
+
+# target to preprocess a source file
+Reactor/Acceptor.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Acceptor.cc.i
+.PHONY : Reactor/Acceptor.cc.i
+
+Reactor/Acceptor.s: Reactor/Acceptor.cc.s
+
+.PHONY : Reactor/Acceptor.s
+
+# target to generate assembly for a file
+Reactor/Acceptor.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Acceptor.cc.s
+.PHONY : Reactor/Acceptor.cc.s
+
+Reactor/Condition.o: Reactor/Condition.cc.o
+
+.PHONY : Reactor/Condition.o
+
+# target to build an object file
+Reactor/Condition.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Condition.cc.o
+.PHONY : Reactor/Condition.cc.o
+
+Reactor/Condition.i: Reactor/Condition.cc.i
+
+.PHONY : Reactor/Condition.i
+
+# target to preprocess a source file
+Reactor/Condition.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Condition.cc.i
+.PHONY : Reactor/Condition.cc.i
+
+Reactor/Condition.s: Reactor/Condition.cc.s
+
+.PHONY : Reactor/Condition.s
+
+# target to generate assembly for a file
+Reactor/Condition.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Condition.cc.s
+.PHONY : Reactor/Condition.cc.s
+
+Reactor/EventLoop.o: Reactor/EventLoop.cc.o
+
+.PHONY : Reactor/EventLoop.o
+
+# target to build an object file
+Reactor/EventLoop.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/EventLoop.cc.o
+.PHONY : Reactor/EventLoop.cc.o
+
+Reactor/EventLoop.i: Reactor/EventLoop.cc.i
+
+.PHONY : Reactor/EventLoop.i
+
+# target to preprocess a source file
+Reactor/EventLoop.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/EventLoop.cc.i
+.PHONY : Reactor/EventLoop.cc.i
+
+Reactor/EventLoop.s: Reactor/EventLoop.cc.s
+
+.PHONY : Reactor/EventLoop.s
+
+# target to generate assembly for a file
+Reactor/EventLoop.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/EventLoop.cc.s
+.PHONY : Reactor/EventLoop.cc.s
+
+Reactor/InetAddress.o: Reactor/InetAddress.cc.o
+
+.PHONY : Reactor/InetAddress.o
+
+# target to build an object file
+Reactor/InetAddress.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/InetAddress.cc.o
+.PHONY : Reactor/InetAddress.cc.o
+
+Reactor/InetAddress.i: Reactor/InetAddress.cc.i
+
+.PHONY : Reactor/InetAddress.i
+
+# target to preprocess a source file
+Reactor/InetAddress.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/InetAddress.cc.i
+.PHONY : Reactor/InetAddress.cc.i
+
+Reactor/InetAddress.s: Reactor/InetAddress.cc.s
+
+.PHONY : Reactor/InetAddress.s
+
+# target to generate assembly for a file
+Reactor/InetAddress.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/InetAddress.cc.s
+.PHONY : Reactor/InetAddress.cc.s
+
+Reactor/MutexLock.o: Reactor/MutexLock.cc.o
+
+.PHONY : Reactor/MutexLock.o
+
+# target to build an object file
+Reactor/MutexLock.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/MutexLock.cc.o
+.PHONY : Reactor/MutexLock.cc.o
+
+Reactor/MutexLock.i: Reactor/MutexLock.cc.i
+
+.PHONY : Reactor/MutexLock.i
+
+# target to preprocess a source file
+Reactor/MutexLock.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/MutexLock.cc.i
+.PHONY : Reactor/MutexLock.cc.i
+
+Reactor/MutexLock.s: Reactor/MutexLock.cc.s
+
+.PHONY : Reactor/MutexLock.s
+
+# target to generate assembly for a file
+Reactor/MutexLock.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/MutexLock.cc.s
+.PHONY : Reactor/MutexLock.cc.s
+
+Reactor/Socket.o: Reactor/Socket.cc.o
+
+.PHONY : Reactor/Socket.o
+
+# target to build an object file
+Reactor/Socket.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Socket.cc.o
+.PHONY : Reactor/Socket.cc.o
+
+Reactor/Socket.i: Reactor/Socket.cc.i
+
+.PHONY : Reactor/Socket.i
+
+# target to preprocess a source file
+Reactor/Socket.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Socket.cc.i
+.PHONY : Reactor/Socket.cc.i
+
+Reactor/Socket.s: Reactor/Socket.cc.s
+
+.PHONY : Reactor/Socket.s
+
+# target to generate assembly for a file
+Reactor/Socket.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Socket.cc.s
+.PHONY : Reactor/Socket.cc.s
+
+Reactor/SocketIO.o: Reactor/SocketIO.cc.o
+
+.PHONY : Reactor/SocketIO.o
+
+# target to build an object file
+Reactor/SocketIO.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/SocketIO.cc.o
+.PHONY : Reactor/SocketIO.cc.o
+
+Reactor/SocketIO.i: Reactor/SocketIO.cc.i
+
+.PHONY : Reactor/SocketIO.i
+
+# target to preprocess a source file
+Reactor/SocketIO.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/SocketIO.cc.i
+.PHONY : Reactor/SocketIO.cc.i
+
+Reactor/SocketIO.s: Reactor/SocketIO.cc.s
+
+.PHONY : Reactor/SocketIO.s
+
+# target to generate assembly for a file
+Reactor/SocketIO.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/SocketIO.cc.s
+.PHONY : Reactor/SocketIO.cc.s
+
+Reactor/TaskQueue.o: Reactor/TaskQueue.cc.o
+
+.PHONY : Reactor/TaskQueue.o
+
+# target to build an object file
+Reactor/TaskQueue.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TaskQueue.cc.o
+.PHONY : Reactor/TaskQueue.cc.o
+
+Reactor/TaskQueue.i: Reactor/TaskQueue.cc.i
+
+.PHONY : Reactor/TaskQueue.i
+
+# target to preprocess a source file
+Reactor/TaskQueue.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TaskQueue.cc.i
+.PHONY : Reactor/TaskQueue.cc.i
+
+Reactor/TaskQueue.s: Reactor/TaskQueue.cc.s
+
+.PHONY : Reactor/TaskQueue.s
+
+# target to generate assembly for a file
+Reactor/TaskQueue.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TaskQueue.cc.s
+.PHONY : Reactor/TaskQueue.cc.s
+
+Reactor/TcpConnection.o: Reactor/TcpConnection.cc.o
+
+.PHONY : Reactor/TcpConnection.o
+
+# target to build an object file
+Reactor/TcpConnection.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TcpConnection.cc.o
+.PHONY : Reactor/TcpConnection.cc.o
+
+Reactor/TcpConnection.i: Reactor/TcpConnection.cc.i
+
+.PHONY : Reactor/TcpConnection.i
+
+# target to preprocess a source file
+Reactor/TcpConnection.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TcpConnection.cc.i
+.PHONY : Reactor/TcpConnection.cc.i
+
+Reactor/TcpConnection.s: Reactor/TcpConnection.cc.s
+
+.PHONY : Reactor/TcpConnection.s
+
+# target to generate assembly for a file
+Reactor/TcpConnection.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TcpConnection.cc.s
+.PHONY : Reactor/TcpConnection.cc.s
+
+Reactor/TcpServer.o: Reactor/TcpServer.cc.o
+
+.PHONY : Reactor/TcpServer.o
+
+# target to build an object file
+Reactor/TcpServer.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TcpServer.cc.o
+.PHONY : Reactor/TcpServer.cc.o
+
+Reactor/TcpServer.i: Reactor/TcpServer.cc.i
+
+.PHONY : Reactor/TcpServer.i
+
+# target to preprocess a source file
+Reactor/TcpServer.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TcpServer.cc.i
+.PHONY : Reactor/TcpServer.cc.i
+
+Reactor/TcpServer.s: Reactor/TcpServer.cc.s
+
+.PHONY : Reactor/TcpServer.s
+
+# target to generate assembly for a file
+Reactor/TcpServer.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/TcpServer.cc.s
+.PHONY : Reactor/TcpServer.cc.s
+
+Reactor/Thread.o: Reactor/Thread.cc.o
+
+.PHONY : Reactor/Thread.o
+
+# target to build an object file
+Reactor/Thread.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Thread.cc.o
+.PHONY : Reactor/Thread.cc.o
+
+Reactor/Thread.i: Reactor/Thread.cc.i
+
+.PHONY : Reactor/Thread.i
+
+# target to preprocess a source file
+Reactor/Thread.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Thread.cc.i
+.PHONY : Reactor/Thread.cc.i
+
+Reactor/Thread.s: Reactor/Thread.cc.s
+
+.PHONY : Reactor/Thread.s
+
+# target to generate assembly for a file
+Reactor/Thread.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/Thread.cc.s
+.PHONY : Reactor/Thread.cc.s
+
+Reactor/ThreadPool.o: Reactor/ThreadPool.cc.o
+
+.PHONY : Reactor/ThreadPool.o
+
+# target to build an object file
+Reactor/ThreadPool.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/ThreadPool.cc.o
+.PHONY : Reactor/ThreadPool.cc.o
+
+Reactor/ThreadPool.i: Reactor/ThreadPool.cc.i
+
+.PHONY : Reactor/ThreadPool.i
+
+# target to preprocess a source file
+Reactor/ThreadPool.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/ThreadPool.cc.i
+.PHONY : Reactor/ThreadPool.cc.i
+
+Reactor/ThreadPool.s: Reactor/ThreadPool.cc.s
+
+.PHONY : Reactor/ThreadPool.s
+
+# target to generate assembly for a file
+Reactor/ThreadPool.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Reactor/ThreadPool.cc.s
+.PHONY : Reactor/ThreadPool.cc.s
+
+Web/MySimHash.o: Web/MySimHash.cc.o
+
+.PHONY : Web/MySimHash.o
+
+# target to build an object file
+Web/MySimHash.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/MySimHash.cc.o
+.PHONY : Web/MySimHash.cc.o
+
+Web/MySimHash.i: Web/MySimHash.cc.i
+
+.PHONY : Web/MySimHash.i
+
+# target to preprocess a source file
+Web/MySimHash.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/MySimHash.cc.i
+.PHONY : Web/MySimHash.cc.i
+
+Web/MySimHash.s: Web/MySimHash.cc.s
+
+.PHONY : Web/MySimHash.s
+
+# target to generate assembly for a file
+Web/MySimHash.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/MySimHash.cc.s
+.PHONY : Web/MySimHash.cc.s
+
+Web/PageLibPreprocessor.o: Web/PageLibPreprocessor.cc.o
+
+.PHONY : Web/PageLibPreprocessor.o
+
+# target to build an object file
+Web/PageLibPreprocessor.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/PageLibPreprocessor.cc.o
+.PHONY : Web/PageLibPreprocessor.cc.o
+
+Web/PageLibPreprocessor.i: Web/PageLibPreprocessor.cc.i
+
+.PHONY : Web/PageLibPreprocessor.i
+
+# target to preprocess a source file
+Web/PageLibPreprocessor.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/PageLibPreprocessor.cc.i
+.PHONY : Web/PageLibPreprocessor.cc.i
+
+Web/PageLibPreprocessor.s: Web/PageLibPreprocessor.cc.s
+
+.PHONY : Web/PageLibPreprocessor.s
+
+# target to generate assembly for a file
+Web/PageLibPreprocessor.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/PageLibPreprocessor.cc.s
+.PHONY : Web/PageLibPreprocessor.cc.s
+
+Web/RssParse.o: Web/RssParse.cc.o
+
+.PHONY : Web/RssParse.o
+
+# target to build an object file
+Web/RssParse.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/RssParse.cc.o
+.PHONY : Web/RssParse.cc.o
+
+Web/RssParse.i: Web/RssParse.cc.i
+
+.PHONY : Web/RssParse.i
+
+# target to preprocess a source file
+Web/RssParse.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/RssParse.cc.i
+.PHONY : Web/RssParse.cc.i
+
+Web/RssParse.s: Web/RssParse.cc.s
+
+.PHONY : Web/RssParse.s
+
+# target to generate assembly for a file
+Web/RssParse.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/RssParse.cc.s
+.PHONY : Web/RssParse.cc.s
+
+Web/WebPage.o: Web/WebPage.cc.o
+
+.PHONY : Web/WebPage.o
+
+# target to build an object file
+Web/WebPage.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/WebPage.cc.o
+.PHONY : Web/WebPage.cc.o
+
+Web/WebPage.i: Web/WebPage.cc.i
+
+.PHONY : Web/WebPage.i
+
+# target to preprocess a source file
+Web/WebPage.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/WebPage.cc.i
+.PHONY : Web/WebPage.cc.i
+
+Web/WebPage.s: Web/WebPage.cc.s
+
+.PHONY : Web/WebPage.s
+
+# target to generate assembly for a file
+Web/WebPage.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/WebPage.cc.s
+.PHONY : Web/WebPage.cc.s
+
+Web/WebPageQuery.o: Web/WebPageQuery.cc.o
+
+.PHONY : Web/WebPageQuery.o
+
+# target to build an object file
+Web/WebPageQuery.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/WebPageQuery.cc.o
+.PHONY : Web/WebPageQuery.cc.o
+
+Web/WebPageQuery.i: Web/WebPageQuery.cc.i
+
+.PHONY : Web/WebPageQuery.i
+
+# target to preprocess a source file
+Web/WebPageQuery.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/WebPageQuery.cc.i
+.PHONY : Web/WebPageQuery.cc.i
+
+Web/WebPageQuery.s: Web/WebPageQuery.cc.s
+
+.PHONY : Web/WebPageQuery.s
+
+# target to generate assembly for a file
+Web/WebPageQuery.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Web/WebPageQuery.cc.s
+.PHONY : Web/WebPageQuery.cc.s
+
+__/lib/tinyxml2.o: __/lib/tinyxml2.cc.o
+
+.PHONY : __/lib/tinyxml2.o
+
+# target to build an object file
+__/lib/tinyxml2.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/__/lib/tinyxml2.cc.o
+.PHONY : __/lib/tinyxml2.cc.o
+
+__/lib/tinyxml2.i: __/lib/tinyxml2.cc.i
+
+.PHONY : __/lib/tinyxml2.i
+
+# target to preprocess a source file
+__/lib/tinyxml2.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/__/lib/tinyxml2.cc.i
+.PHONY : __/lib/tinyxml2.cc.i
+
+__/lib/tinyxml2.s: __/lib/tinyxml2.cc.s
+
+.PHONY : __/lib/tinyxml2.s
+
+# target to generate assembly for a file
+__/lib/tinyxml2.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/__/lib/tinyxml2.cc.s
+.PHONY : __/lib/tinyxml2.cc.s
+
+main.o: main.cc.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/main.cc.o
+.PHONY : main.cc.o
+
+main.i: main.cc.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/main.cc.i
+.PHONY : main.cc.i
+
+main.s: main.cc.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/main.cc.s
+.PHONY : main.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -117,7 +834,86 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... server"
 	@echo "... edit_cache"
+	@echo "... Key/DictProducer.o"
+	@echo "... Key/DictProducer.i"
+	@echo "... Key/DictProducer.s"
+	@echo "... Key/KeyRecommander.o"
+	@echo "... Key/KeyRecommander.i"
+	@echo "... Key/KeyRecommander.s"
+	@echo "... Public/ConfigMgr.o"
+	@echo "... Public/ConfigMgr.i"
+	@echo "... Public/ConfigMgr.s"
+	@echo "... Public/DirScanner.o"
+	@echo "... Public/DirScanner.i"
+	@echo "... Public/DirScanner.s"
+	@echo "... Public/LogMgr.o"
+	@echo "... Public/LogMgr.i"
+	@echo "... Public/LogMgr.s"
+	@echo "... Public/SplitToolCppJieba.o"
+	@echo "... Public/SplitToolCppJieba.i"
+	@echo "... Public/SplitToolCppJieba.s"
+	@echo "... Public/StopWords.o"
+	@echo "... Public/StopWords.i"
+	@echo "... Public/StopWords.s"
+	@echo "... Reactor/Acceptor.o"
+	@echo "... Reactor/Acceptor.i"
+	@echo "... Reactor/Acceptor.s"
+	@echo "... Reactor/Condition.o"
+	@echo "... Reactor/Condition.i"
+	@echo "... Reactor/Condition.s"
+	@echo "... Reactor/EventLoop.o"
+	@echo "... Reactor/EventLoop.i"
+	@echo "... Reactor/EventLoop.s"
+	@echo "... Reactor/InetAddress.o"
+	@echo "... Reactor/InetAddress.i"
+	@echo "... Reactor/InetAddress.s"
+	@echo "... Reactor/MutexLock.o"
+	@echo "... Reactor/MutexLock.i"
+	@echo "... Reactor/MutexLock.s"
+	@echo "... Reactor/Socket.o"
+	@echo "... Reactor/Socket.i"
+	@echo "... Reactor/Socket.s"
+	@echo "... Reactor/SocketIO.o"
+	@echo "... Reactor/SocketIO.i"
+	@echo "... Reactor/SocketIO.s"
+	@echo "... Reactor/TaskQueue.o"
+	@echo "... Reactor/TaskQueue.i"
+	@echo "... Reactor/TaskQueue.s"
+	@echo "... Reactor/TcpConnection.o"
+	@echo "... Reactor/TcpConnection.i"
+	@echo "... Reactor/TcpConnection.s"
+	@echo "... Reactor/TcpServer.o"
+	@echo "... Reactor/TcpServer.i"
+	@echo "... Reactor/TcpServer.s"
+	@echo "... Reactor/Thread.o"
+	@echo "... Reactor/Thread.i"
+	@echo "... Reactor/Thread.s"
+	@echo "... Reactor/ThreadPool.o"
+	@echo "... Reactor/ThreadPool.i"
+	@echo "... Reactor/ThreadPool.s"
+	@echo "... Web/MySimHash.o"
+	@echo "... Web/MySimHash.i"
+	@echo "... Web/MySimHash.s"
+	@echo "... Web/PageLibPreprocessor.o"
+	@echo "... Web/PageLibPreprocessor.i"
+	@echo "... Web/PageLibPreprocessor.s"
+	@echo "... Web/RssParse.o"
+	@echo "... Web/RssParse.i"
+	@echo "... Web/RssParse.s"
+	@echo "... Web/WebPage.o"
+	@echo "... Web/WebPage.i"
+	@echo "... Web/WebPage.s"
+	@echo "... Web/WebPageQuery.o"
+	@echo "... Web/WebPageQuery.i"
+	@echo "... Web/WebPageQuery.s"
+	@echo "... __/lib/tinyxml2.o"
+	@echo "... __/lib/tinyxml2.i"
+	@echo "... __/lib/tinyxml2.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

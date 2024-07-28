@@ -1,7 +1,5 @@
 /home/ario/Projects_git/search_engine/build/CMakeFiles/rebuild_cache.dir
 /home/ario/Projects_git/search_engine/build/CMakeFiles/edit_cache.dir
 /home/ario/Projects_git/search_engine/build/src/CMakeFiles/rebuild_cache.dir
+/home/ario/Projects_git/search_engine/build/src/CMakeFiles/server.dir
 /home/ario/Projects_git/search_engine/build/src/CMakeFiles/edit_cache.dir
-/home/ario/Projects_git/search_engine/build/src/keyrec/CMakeFiles/rebuild_cache.dir
-/home/ario/Projects_git/search_engine/build/src/keyrec/CMakeFiles/keyrec.dir
-/home/ario/Projects_git/search_engine/build/src/keyrec/CMakeFiles/edit_cache.dir

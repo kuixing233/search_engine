@@ -6,4 +6,4 @@ rm -rf `pwd`/build/*
 cd `pwd`/build && 
     cmake .. &&
     make &&
-    ../bin/keyrec
+    ../bin/server
