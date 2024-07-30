@@ -5,4 +5,4 @@ aux_source_directory(. SRC_LIST)
 add_executable(client ${SRC_LIST})
 
 # 指定可执行文件链接时所依赖的库文件
-target_link_libraries(client json)
+target_link_libraries(client)

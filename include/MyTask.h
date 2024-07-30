@@ -6,8 +6,6 @@
 #include "WebPageQuery.h"
 #include "CacheManager.h"
 
-#include <json/json.h>
-
 class MyTask
 {
 public:

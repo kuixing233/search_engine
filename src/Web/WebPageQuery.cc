@@ -5,7 +5,7 @@
 #include "StopWords.h"
 #include "RssParse.h"
 
-#include <json/json.h>
+#include "json.hpp"
 
 #include <algorithm>
 
@@ -224,40 +224,41 @@ std::string WebPageQuery::createRetJsonStr(std::priority_queue<CandidateDoc> &re
 {
     std::cout << "匹配到的文章个数：" << resultQue.size() << std::endl;
 
-    Json::Value retJson;
+    using Json = nlohmann::json;
+    Json retJson;
     retJson["code"] = 0;
 
     for (auto &keyword : queryWords)
     {
-        retJson["keywords"].append(keyword);
+        retJson["keywords"].push_back(keyword);
     }
     int max_index = resultQue.size() > 5 ? 5 : resultQue.size();
     for (int i = 0; i < max_index; ++i)
     {
         CandidateDoc canDoc = resultQue.top();
-        Json::Value value;
+        Json value;
         value["docId"] = canDoc._docId;
         value["title"] = canDoc._docTitle;
         value["url"] = canDoc._docUrl;
         value["desc"] = canDoc._docDesc;
 
-        retJson["data"].append(value);
+        retJson["data"].push_back(value);
         resultQue.pop();
     }
-    Json::FastWriter fastWriter;
-    std::string retJsonStr = fastWriter.write(retJson);
+    std::string retJsonStr = retJson.dump();
     LogInfo("匹配到结果：%s", retJsonStr.c_str());
     return retJsonStr;
 }
 
 std::string WebPageQuery::returnNoAnswer()
 {
-    Json::Value retJson;
+    using Json = nlohmann::json;
+
+    Json retJson;
     retJson["code"] = 1;
     retJson["data"] = "未查询到结果";
     LogInfo("没有匹配到结果");
-    Json::FastWriter fastWriter;
-    std::string retJsonStr = fastWriter.write(retJson);
+    std::string retJsonStr = retJson.dump();
     return retJsonStr;
 }
 

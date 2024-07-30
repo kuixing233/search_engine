@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include <json/json.h>
+#include "json.hpp"
 
 #include <iostream>
 #include <string>
@@ -16,6 +16,9 @@ using std::cin;
 using std::cout;
 using std::endl;
 using std::string;
+
+using Json = nlohmann::json;
+
 
 /* #define ERROR_CHECK(msg, ret) if (ret == -1) {printf("%s error!\n", msg);} */
 
@@ -136,42 +139,39 @@ int writen(int _fd, const char *buf, int len)
 
 void keyRecPro(string retJsonStr)
 {
-    Json::Reader reader;
-    Json::Value root;
-    reader.parse(retJsonStr, root);
-    int code = root["code"].asInt();
+    Json root = Json::parse(retJsonStr);
+    int code = root["code"];
     if (code != 0)
     {
         cout << ">> system: 未找到相关内容！" << endl;
         return;
     }
-    Json::Value data = root["data"];
+    Json data = root["data"];
     cout << ">> system: 关键词查询结果如下：" << endl;
     for (int i = 0; i < data.size(); ++i)
     {
-        cout << data[i]["word"].asString() << endl;
+        cout << data[i]["word"] << endl;
     }
     std::cout << endl;
 }
 
 void webQueryPro(string retJsonStr)
 {
-    Json::Reader reader;
-    Json::Value root;
-    reader.parse(retJsonStr, root);
-    int code = root["code"].asInt();
+    Json root = Json::parse(retJsonStr);
+
+    int code = root["code"];
     if (code != 0)
     {
         cout << ">> system: 未找到相关内容！" << endl;
         return;
     }
-    Json::Value data = root["data"];
+    Json data = root["data"];
     cout << ">> system: 网页查询结果如下：" << endl;
     for (int i = 0; i < data.size(); ++i)
     {
-        cout << "[标题]：" << data[i]["title"].asString() << endl;
-        cout << "[链接]：" << data[i]["url"].asString() << endl;
-        cout << "[简介]：" << data[i]["desc"].asString() << endl;
+        cout << "[标题]：" << data[i]["title"] << endl;
+        cout << "[链接]：" << data[i]["url"] << endl;
+        cout << "[简介]：" << data[i]["desc"] << endl;
         cout << endl;
     }
 }
@@ -188,7 +188,7 @@ void test()
     struct sockaddr_in serveraddr;
     serveraddr.sin_family = AF_INET;
     serveraddr.sin_port = htons(8888);
-    serveraddr.sin_addr.s_addr = inet_addr("192.168.25.131");
+    serveraddr.sin_addr.s_addr = inet_addr("47.236.114.87");
     int ret = connect(clientfd, (struct sockaddr *)&serveraddr, sizeof(serveraddr));
     if (ret < 0)
     {

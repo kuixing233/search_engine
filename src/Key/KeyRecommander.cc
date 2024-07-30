@@ -1,9 +1,8 @@
 #include "KeyRecommander.h"
 #include "LogMgr.h"
 #include "ConfigMgr.h"
-#include "RedisMgr.h"
 
-#include <json/json.h>
+#include "json.hpp"
 
 #include <algorithm>
 #include <iostream>
@@ -184,8 +183,8 @@ bool KeyRecommander::queryIndextable(std::string queryWord, std::priority_queue<
 
 std::string KeyRecommander::createRetJsonStr(std::priority_queue<CandidateResult> &resultQue)
 {
-    Json::Value retJson;
-
+    using Json = nlohmann::json;
+    Json retJson;
     retJson["code"] = 0;
     int max_index = resultQue.size() > 5 ? 5 : resultQue.size();
     std::cout << "候选词个数：" << resultQue.size() << std::endl;
@@ -193,26 +192,25 @@ std::string KeyRecommander::createRetJsonStr(std::priority_queue<CandidateResult
     {
         // std::cout << resultQue.top()._word << ": " << resultQue.top()._dist << "、" << resultQue.top()._freq << std::endl;
         CandidateResult res = resultQue.top();
-        Json::Value value;
+        Json value;
         value["word"] = res._word;
         value["dist"] = res._dist;
         value["freq"] = res._freq;
-        retJson["data"].append(value);
+        retJson["data"].push_back(value);
         resultQue.pop();
     }
-    Json::FastWriter fastWriter;
-    std::string retJsonStr = fastWriter.write(retJson);
+    std::string retJsonStr = retJson.dump();
     LogInfo("匹配到结果: %s", retJsonStr.c_str());
     return retJsonStr;
 }
 
 std::string KeyRecommander::returnNoAnswer()
 {
-    Json::Value retJson;
+    using Json = nlohmann::json;
+    Json retJson;
     retJson["code"] = 1;
     retJson["data"] = "未查询到结果";
-    Json::FastWriter fastWriter;
-    std::string retJsonStr = fastWriter.write(retJson);
+    std::string retJsonStr = retJson.dump();
     LogInfo("未查询到结果: %s", retJsonStr.c_str());
     return retJsonStr;
 }
