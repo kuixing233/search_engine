@@ -18,12 +18,14 @@ using std::function;
         printf("%s: %s", msg, strerror(ret));\
     } while (0)
 
+extern __thread const char * name;
+
 class Thread
 {
 public:
     using ThreadCallback = function<void()>;
 public:
-    Thread(ThreadCallback &&);
+    Thread(ThreadCallback &&, const std::string &);
     ~Thread();
 
     // 线程创建和等待函数
@@ -37,6 +39,7 @@ private:
 
 private:
     pthread_t _thid;
+    std::string _name;
     bool _isRunning;
     ThreadCallback _cb;
 };

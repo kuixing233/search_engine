@@ -22,7 +22,7 @@ void ThreadPool::start()
 {
     for (size_t idx = 0; idx != _threadNum; ++ idx)
     {
-        unique_ptr<Thread> up(new Thread(std::bind(&ThreadPool::threadFunc, this)));
+        unique_ptr<Thread> up(new Thread(std::bind(&ThreadPool::threadFunc, this), std::to_string(idx)));
         _threads.push_back(std::move(up)); // 注意容器只能存unique_ptr的右值 
     }
 

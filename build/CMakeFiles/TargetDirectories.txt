@@ -3,3 +3,6 @@
 /home/ario/Projects_git/search_engine/build/src/CMakeFiles/rebuild_cache.dir
 /home/ario/Projects_git/search_engine/build/src/CMakeFiles/server.dir
 /home/ario/Projects_git/search_engine/build/src/CMakeFiles/edit_cache.dir
+/home/ario/Projects_git/search_engine/build/src/Client/CMakeFiles/rebuild_cache.dir
+/home/ario/Projects_git/search_engine/build/src/Client/CMakeFiles/client.dir
+/home/ario/Projects_git/search_engine/build/src/Client/CMakeFiles/edit_cache.dir

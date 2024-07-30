@@ -5,6 +5,9 @@
 #include "PageLibPreprocessor.h"
 #include "StopWords.h"
 #include "ConfigMgr.h"
+#include "CacheManager.h"
+
+#include <thread>
 
 void test1()
 {
@@ -32,6 +35,8 @@ void test1()
     MySimHash::GetInstance();
     KeyRecommander::GetInstance();
     WebPageQuery::GetInstance();
+    CacheManager::GetInstance()->initCache(atoi(ConfigMgr::Inst()["System"]["THREADNUM"].c_str()),
+                                           ConfigMgr::Inst()["System"]["CACHE_PATH"]);
 
     // 根据配置文件启动搜索引擎
     string ip = ConfigMgr::Inst()["System"]["IP"];

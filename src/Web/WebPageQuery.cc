@@ -198,10 +198,10 @@ std::priority_queue<CandidateDoc> WebPageQuery::getResultQue(const std::map<int,
         auto offsetPair = _offsetLib[docId];
         size_t start = offsetPair.first;
         size_t length = offsetPair.second;
-        std::ifstream ifs(ConfigMgr::Inst()["WebQuery"]["newripepage"]);
+        std::ifstream ifs(ConfigMgr::Inst()["Web"]["newripepage"]);
         if (!ifs.good())
         {
-            LogError("open %s error", ConfigMgr::Inst()["WebQuery"]["newripepage"].c_str());
+            LogError("open %s error", ConfigMgr::Inst()["Web"]["newripepage"].c_str());
         }
         char *buf = new char[length + 1]{0};
         ifs.seekg(start, std::ios::beg);
@@ -246,7 +246,6 @@ std::string WebPageQuery::createRetJsonStr(std::priority_queue<CandidateDoc> &re
     }
     Json::FastWriter fastWriter;
     std::string retJsonStr = fastWriter.write(retJson);
-    retJsonStr += "\n";
     LogInfo("匹配到结果：%s", retJsonStr.c_str());
     return retJsonStr;
 }
@@ -259,7 +258,6 @@ std::string WebPageQuery::returnNoAnswer()
     LogInfo("没有匹配到结果");
     Json::FastWriter fastWriter;
     std::string retJsonStr = fastWriter.write(retJson);
-    retJsonStr += "\n";
     return retJsonStr;
 }
 

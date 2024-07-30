@@ -1,7 +1,10 @@
 #include "Thread.h"
 
-Thread::Thread(ThreadCallback &&cb)
+__thread const char * name = "default thread name";
+
+Thread::Thread(ThreadCallback &&cb, const std::string & name = std::string())
 : _thid(0)
+, _name(name)
 , _isRunning(false)
 , _cb(std::move(cb))
 {
@@ -25,6 +28,7 @@ void Thread::start()
         return;
     }
     _isRunning = true;
+    std::cout << "pthread_create success, name = " << _name << std::endl;
 }
 
 void Thread::join()
@@ -41,6 +45,7 @@ void Thread::join()
 void * Thread::threadFunc(void *args)
 {
     Thread *pth1 = (Thread *)args;
+    name = pth1->_name.c_str(); // 当前线程的局部变量name就被修改了
     if (pth1)
         pth1->_cb();
     pthread_exit(nullptr);

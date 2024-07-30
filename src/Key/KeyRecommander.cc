@@ -1,6 +1,7 @@
 #include "KeyRecommander.h"
 #include "LogMgr.h"
 #include "ConfigMgr.h"
+#include "RedisMgr.h"
 
 #include <json/json.h>
 
@@ -22,7 +23,7 @@ bool operator<(const CandidateResult &lhs, const CandidateResult &rhs)
         return lhs._freq < rhs._freq; // 频次越小排在越后面
     }
     // 编辑距离和词频相同，按字典序从小到大排序
-    return lhs._word > rhs._word;     // 字典序越大排在越后面
+    return lhs._word > rhs._word; // 字典序越大排在越后面
 }
 
 /************************最小编辑距离算法 start************************/
@@ -118,13 +119,25 @@ KeyRecommander::KeyRecommander()
 
 std::string KeyRecommander::doQuery(std::string queryWord)
 {
+    std::string retJsonStr;
+
+    // if (RedisMgr::GetInstance()->ExistsKey(queryWord))
+    // {
+    //     LogInfo("查询词 [%s] Redis缓存命中，从Redis中获取数据", queryWord.c_str());
+    //     RedisMgr::GetInstance()->Get(queryWord, retJsonStr);
+    //     return retJsonStr;
+    // }
     std::priority_queue<CandidateResult> resultQue;
     bool ret = queryIndextable(queryWord, resultQue);
     if (ret == false)
     {
-        return returnNoAnswer();
+        retJsonStr = returnNoAnswer();
+        return retJsonStr;
     }
-    return createRetJsonStr(resultQue);
+    retJsonStr = createRetJsonStr(resultQue);
+    // RedisMgr::GetInstance()->Set(queryWord, retJsonStr);
+    // LogInfo("查询词 [%s] 缓存未命中，保存到Redis缓存", queryWord.c_str());
+    return retJsonStr;
 }
 
 bool KeyRecommander::queryIndextable(std::string queryWord, std::priority_queue<CandidateResult> &resultQue)
@@ -189,7 +202,6 @@ std::string KeyRecommander::createRetJsonStr(std::priority_queue<CandidateResult
     }
     Json::FastWriter fastWriter;
     std::string retJsonStr = fastWriter.write(retJson);
-    retJsonStr += "\n";
     LogInfo("匹配到结果: %s", retJsonStr.c_str());
     return retJsonStr;
 }
@@ -198,10 +210,9 @@ std::string KeyRecommander::returnNoAnswer()
 {
     Json::Value retJson;
     retJson["code"] = 1;
-    retJson["data"] = "NULL";
+    retJson["data"] = "未查询到结果";
     Json::FastWriter fastWriter;
     std::string retJsonStr = fastWriter.write(retJson);
-    retJsonStr += "\n";
     LogInfo("未查询到结果: %s", retJsonStr.c_str());
     return retJsonStr;
 }

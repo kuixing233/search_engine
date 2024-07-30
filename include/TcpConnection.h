@@ -63,7 +63,6 @@ private:
     TcpConnectionCallback _onConnection;
     TcpConnectionCallback _onMessage;
     TcpConnectionCallback _onClose;
-    
 };
 
 #endif

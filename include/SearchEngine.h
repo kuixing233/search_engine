@@ -16,7 +16,7 @@ class SearchEngine
 public:
     SearchEngine(size_t threadNum, size_t queSize,
                  const string &ip, unsigned short port)
-        : _pool(threadNum, queSize), _tcpserver(ip, port)
+        : _pool(threadNum, queSize), _tcpserver(ip, port), _tfd((std::bind(&CacheManager::periodicUpdateCaches, CacheManager::GetInstance())))
     {
         LogInfo("SearchEngine Start on IP: %s Port: %d", ip.c_str(), port);
     }
@@ -29,6 +29,11 @@ public:
     {
         using namespace std::placeholders;
         _pool.start();
+
+        // Thread th(std::bind(&TimerFd::start, &_tfd), "缓存更新线程");
+        // th.start();
+
+        _pool.addTask(std::bind(&TimerFd::start, &_tfd));
 
         _tcpserver.setAllCallback(std::bind(&SearchEngine::onConnection, this, _1),
                                   std::bind(&SearchEngine::onMessage, this, _1),
@@ -49,7 +54,7 @@ public:
 
     void onMessage(const TcpConnectionPtr &con)
     {
-        // 数据的接收
+        // 数据的接收，放到子线程中
         string msg = con->receive();
         msg = msg.substr(0, msg.size() - 1);
         cout << ">>> recv message from client: " << msg << endl;
@@ -67,5 +72,6 @@ public:
 private:
     ThreadPool _pool;
     TcpServer _tcpserver;
+    TimerFd _tfd;
 };
 #endif

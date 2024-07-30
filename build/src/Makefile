@@ -179,6 +179,33 @@ Key/KeyRecommander.cc.s:
 	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Key/KeyRecommander.cc.s
 .PHONY : Key/KeyRecommander.cc.s
 
+Public/CacheManager.o: Public/CacheManager.cc.o
+
+.PHONY : Public/CacheManager.o
+
+# target to build an object file
+Public/CacheManager.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/CacheManager.cc.o
+.PHONY : Public/CacheManager.cc.o
+
+Public/CacheManager.i: Public/CacheManager.cc.i
+
+.PHONY : Public/CacheManager.i
+
+# target to preprocess a source file
+Public/CacheManager.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/CacheManager.cc.i
+.PHONY : Public/CacheManager.cc.i
+
+Public/CacheManager.s: Public/CacheManager.cc.s
+
+.PHONY : Public/CacheManager.s
+
+# target to generate assembly for a file
+Public/CacheManager.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/CacheManager.cc.s
+.PHONY : Public/CacheManager.cc.s
+
 Public/ConfigMgr.o: Public/ConfigMgr.cc.o
 
 .PHONY : Public/ConfigMgr.o
@@ -233,6 +260,33 @@ Public/DirScanner.cc.s:
 	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/DirScanner.cc.s
 .PHONY : Public/DirScanner.cc.s
 
+Public/LRUCache.o: Public/LRUCache.cc.o
+
+.PHONY : Public/LRUCache.o
+
+# target to build an object file
+Public/LRUCache.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/LRUCache.cc.o
+.PHONY : Public/LRUCache.cc.o
+
+Public/LRUCache.i: Public/LRUCache.cc.i
+
+.PHONY : Public/LRUCache.i
+
+# target to preprocess a source file
+Public/LRUCache.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/LRUCache.cc.i
+.PHONY : Public/LRUCache.cc.i
+
+Public/LRUCache.s: Public/LRUCache.cc.s
+
+.PHONY : Public/LRUCache.s
+
+# target to generate assembly for a file
+Public/LRUCache.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/LRUCache.cc.s
+.PHONY : Public/LRUCache.cc.s
+
 Public/LogMgr.o: Public/LogMgr.cc.o
 
 .PHONY : Public/LogMgr.o
@@ -259,6 +313,33 @@ Public/LogMgr.s: Public/LogMgr.cc.s
 Public/LogMgr.cc.s:
 	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/LogMgr.cc.s
 .PHONY : Public/LogMgr.cc.s
+
+Public/RedisMgr.o: Public/RedisMgr.cc.o
+
+.PHONY : Public/RedisMgr.o
+
+# target to build an object file
+Public/RedisMgr.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/RedisMgr.cc.o
+.PHONY : Public/RedisMgr.cc.o
+
+Public/RedisMgr.i: Public/RedisMgr.cc.i
+
+.PHONY : Public/RedisMgr.i
+
+# target to preprocess a source file
+Public/RedisMgr.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/RedisMgr.cc.i
+.PHONY : Public/RedisMgr.cc.i
+
+Public/RedisMgr.s: Public/RedisMgr.cc.s
+
+.PHONY : Public/RedisMgr.s
+
+# target to generate assembly for a file
+Public/RedisMgr.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/RedisMgr.cc.s
+.PHONY : Public/RedisMgr.cc.s
 
 Public/SplitToolCppJieba.o: Public/SplitToolCppJieba.cc.o
 
@@ -313,6 +394,33 @@ Public/StopWords.s: Public/StopWords.cc.s
 Public/StopWords.cc.s:
 	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/StopWords.cc.s
 .PHONY : Public/StopWords.cc.s
+
+Public/TimerFd.o: Public/TimerFd.cc.o
+
+.PHONY : Public/TimerFd.o
+
+# target to build an object file
+Public/TimerFd.cc.o:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/TimerFd.cc.o
+.PHONY : Public/TimerFd.cc.o
+
+Public/TimerFd.i: Public/TimerFd.cc.i
+
+.PHONY : Public/TimerFd.i
+
+# target to preprocess a source file
+Public/TimerFd.cc.i:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/TimerFd.cc.i
+.PHONY : Public/TimerFd.cc.i
+
+Public/TimerFd.s: Public/TimerFd.cc.s
+
+.PHONY : Public/TimerFd.s
+
+# target to generate assembly for a file
+Public/TimerFd.cc.s:
+	cd /home/ario/Projects_git/search_engine/build && $(MAKE) -f src/CMakeFiles/server.dir/build.make src/CMakeFiles/server.dir/Public/TimerFd.cc.s
+.PHONY : Public/TimerFd.cc.s
 
 Reactor/Acceptor.o: Reactor/Acceptor.cc.o
 
@@ -842,21 +950,33 @@ help:
 	@echo "... Key/KeyRecommander.o"
 	@echo "... Key/KeyRecommander.i"
 	@echo "... Key/KeyRecommander.s"
+	@echo "... Public/CacheManager.o"
+	@echo "... Public/CacheManager.i"
+	@echo "... Public/CacheManager.s"
 	@echo "... Public/ConfigMgr.o"
 	@echo "... Public/ConfigMgr.i"
 	@echo "... Public/ConfigMgr.s"
 	@echo "... Public/DirScanner.o"
 	@echo "... Public/DirScanner.i"
 	@echo "... Public/DirScanner.s"
+	@echo "... Public/LRUCache.o"
+	@echo "... Public/LRUCache.i"
+	@echo "... Public/LRUCache.s"
 	@echo "... Public/LogMgr.o"
 	@echo "... Public/LogMgr.i"
 	@echo "... Public/LogMgr.s"
+	@echo "... Public/RedisMgr.o"
+	@echo "... Public/RedisMgr.i"
+	@echo "... Public/RedisMgr.s"
 	@echo "... Public/SplitToolCppJieba.o"
 	@echo "... Public/SplitToolCppJieba.i"
 	@echo "... Public/SplitToolCppJieba.s"
 	@echo "... Public/StopWords.o"
 	@echo "... Public/StopWords.i"
 	@echo "... Public/StopWords.s"
+	@echo "... Public/TimerFd.o"
+	@echo "... Public/TimerFd.i"
+	@echo "... Public/TimerFd.s"
 	@echo "... Reactor/Acceptor.o"
 	@echo "... Reactor/Acceptor.i"
 	@echo "... Reactor/Acceptor.s"
