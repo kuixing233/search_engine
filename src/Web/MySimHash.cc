@@ -17,10 +17,10 @@ MySimHash::~MySimHash()
 {
 }
 
-uint64_t MySimHash::getSimHashValue(const std::string &str, size_t k)
+uint64_t MySimHash::getSimHashValue(const std::string &str, size_t topN)
 {
-    uint64_t _u64;
-    _simHasher.make(str, k, _u64);
+    uint64_t _u64; // 文档的指纹
+    _simHasher.make(str, topN, _u64);
     return _u64;
 }
 

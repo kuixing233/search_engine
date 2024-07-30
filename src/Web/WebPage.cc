@@ -52,7 +52,8 @@ std::string WebPage::getDocStr()
 
 bool operator==(const WebPage & lhs, const WebPage & rhs)
 {
-    return simhash::Simhasher::isEqual(lhs._simHashValue, rhs._simHashValue);
+    // 两个文档的指纹的海明距离小于5，认为两个文档相等
+    return simhash::Simhasher::isEqual(lhs._simHashValue, rhs._simHashValue, 5);
 }
 
 bool operator<(const WebPage & lhs, const WebPage & rhs)

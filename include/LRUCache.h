@@ -20,17 +20,27 @@ public:
     void writeToFile(const std::string &filename);
     // 更新缓存信息
     void update(const LRUCache &rhs);
+
+    // 把当前缓存整个拷贝到备用缓存中
+    void updateToBack(LRUCache &rhs);
+    // 把当前缓存和备用缓存进行交换
+    void swapBack(LRUCache &rhs);
+    // 获取缓存中的数据
+    std::list<std::pair<std::string, std::string>> getResultList() const;
+    // 清空缓存
+    void clearCache();
+
     // 获取待更新的节点List
-    std::list<std::pair<std::string, std::string>> getPendingUpdateList() const;
+    // std::list<std::pair<std::string, std::string>> getPendingUpdateList() const;
     // 清空待更新的节点List
-    void clearPendingUpdateList();
+    // void clearPendingUpdateList();
 
     void getCache() const;
 
 private:
     std::unordered_map<std::string, std::list<std::pair<std::string, std::string>>::iterator> _hashMap; // 采用hashTable进行查找
     std::list<std::pair<std::string, std::string>> _resultList;                                         // 保存键值对
-    std::list<std::pair<std::string, std::string>> _pendingUpdateList;                                  // 等待更新的节点信息
+    // std::list<std::pair<std::string, std::string>> _pendingUpdateList;                                  // 等待更新的节点信息
     int _capacity;                                                                                      // 缓存节点的容量
 };
 

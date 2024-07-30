@@ -13,9 +13,11 @@ class MySimHash
     friend Singleton<MySimHash>;
 public:
     ~MySimHash();
-    uint64_t getSimHashValue(const std::string& str, size_t k);
+    // 获得文档str的指纹
+    uint64_t getSimHashValue(const std::string& str, size_t topN);
+    // 获得文档str的topN个最重要的关键词以及它们的权重
+    std::vector<std::pair<std::string, double>> getTopK(const std::string& str, size_t topN);
     std::unordered_map<std::string, int> getWordFrec(const std::string& str);
-    std::vector<std::pair<std::string, double>> getTopK(const std::string& str, size_t k);
 
 private:
     MySimHash();

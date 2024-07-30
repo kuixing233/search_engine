@@ -254,7 +254,7 @@ std::string WebPageQuery::returnNoAnswer()
 {
     Json::Value retJson;
     retJson["code"] = 1;
-    retJson["data"] = "NULL";
+    retJson["data"] = "未查询到结果";
     LogInfo("没有匹配到结果");
     Json::FastWriter fastWriter;
     std::string retJsonStr = fastWriter.write(retJson);

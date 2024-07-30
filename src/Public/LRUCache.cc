@@ -14,7 +14,7 @@ LRUCache::LRUCache(const LRUCache &cache)
 {
     _hashMap = cache._hashMap;
     _resultList = cache._resultList;
-    _pendingUpdateList = cache._pendingUpdateList;
+    // _pendingUpdateList = cache._pendingUpdateList;
     _capacity = cache._capacity;
 }
 
@@ -44,10 +44,11 @@ void LRUCache::addElement(const std::string &key, const std::string &value)
         _hashMap.insert(std::make_pair(key, _resultList.begin()));
     }
     // 添加到待更新的节点List
-    _pendingUpdateList.push_back(std::make_pair(key, value));
+    // _pendingUpdateList.push_back(std::make_pair(key, value));
 }
 bool LRUCache::getElement(const std::string &key, std::string &value)
 {
+    // 线程只会访问自己的缓存，不需要加锁
     if (_hashMap.count(key))
     {
         _resultList.splice(_resultList.begin(), _resultList, _hashMap[key]);
@@ -71,8 +72,10 @@ void LRUCache::readFromFile(const std::string &filename)
     while (getline(ifs, line))
     {
         std::istringstream iss(line);
-        iss >> command >> key >> value;
+        iss >> command >> key;
         key = command + " " + key;
+        iss.get();
+        std::getline(iss, value);
         addElement(key, value);
     }
     ifs.close();
@@ -99,23 +102,60 @@ void LRUCache::writeToFile(const std::string &filename)
 void LRUCache::update(const LRUCache &rhs)
 {
     MutexLock lock;
-    for (auto &pair : rhs.getPendingUpdateList())
+    // for (auto it = rhs.getResultList().rbegin(); it != rhs.getResultList().rend(); ++it)
+    // {
+    //     addElement(it->first, it->second);
+    // }
+
+    for (auto it = rhs._resultList.rbegin(); it != rhs._resultList.rend(); ++it)
     {
-        addElement(pair.first, pair.second);
+        if (_hashMap.count(it->first))
+        {
+            continue;
+        }
+        addElement(it->first, it->second);
     }
 }
 
-// 获取待更新的节点List
-std::list<std::pair<std::string, std::string>> LRUCache::getPendingUpdateList() const
+void LRUCache::updateToBack(LRUCache &rhs)
 {
     MutexLock lock;
-    return _pendingUpdateList;
+    for (auto it = _resultList.rbegin(); it != _resultList.rend(); ++it)
+    {
+        rhs.addElement(it->first, it->second);
+    }
 }
 
-void LRUCache::clearPendingUpdateList()
+void LRUCache::swapBack(LRUCache &rhs)
 {
-    _pendingUpdateList.clear();
+    MutexLock lock;
+    std::swap(_resultList, rhs._resultList);
+    std::swap(_hashMap, rhs._hashMap);
 }
+
+std::list<std::pair<std::string, std::string>> LRUCache::getResultList() const
+{
+    return _resultList;
+}
+
+void LRUCache::clearCache()
+{
+    MutexLock lock;
+    _resultList.clear();
+    _hashMap.clear();
+}
+
+// 获取待更新的节点List
+// std::list<std::pair<std::string, std::string>> LRUCache::getPendingUpdateList() const
+// {
+//     MutexLock lock;
+//     return _pendingUpdateList;
+// }
+
+// void LRUCache::clearPendingUpdateList()
+// {
+//     _pendingUpdateList.clear();
+// }
 
 void LRUCache::getCache() const
 {

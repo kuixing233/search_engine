@@ -16,8 +16,11 @@ public:
     void initCache(size_t num, const std::string & filename);
     // 获取某个缓存
     LRUCache & getCache(size_t index);
-    // 定时更新所有缓存
+    // 定时更新所有缓存，增量更新策略
     void periodicUpdateCaches();
+
+    // 定时更新所有缓存，读写分离策略
+    void periodicUpdateCaches2();
 private:
     CacheManager();
     std::vector<LRUCache> _cacheList;

@@ -13,4 +13,4 @@ aux_source_directory(../lib LIB_SRC_LIST)
 add_executable(server ${SRC_LIST} ${PUBLIC_SRC_LIST} ${REACTOR_SRC_LIST} ${KEY_SRC_LIST} ${WEB_SRC_LIST} ${LIB_SRC_LIST})
 
 # 指定可执行文件链接时所依赖的库文件
-target_link_libraries(server boost_system log4cpp pthread json hiredis)
+target_link_libraries(server log4cpp pthread json hiredis)

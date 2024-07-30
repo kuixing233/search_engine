@@ -22,7 +22,7 @@ void TimerFd::start()
 {
     _isStarted = true;
 
-    setTimerfdTime(5, 5); // 开始后5s启动定时器，之后每5s超时一次
+    setTimerfdTime(5, 60); // 开始后5s启动定时器，之后每60s超时一次
 
     struct pollfd fds;
     fds.fd = _timerfd;

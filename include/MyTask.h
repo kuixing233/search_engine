@@ -20,8 +20,6 @@ public:
     }
     void process()
     {
-
-        cout << "线程 [" << name << "] 为您服务" << endl;
         int choice = atoi(_msg.substr(0, 1).c_str());
         string msg = _msg.substr(2);
         std::string resStr;
@@ -42,30 +40,26 @@ public:
             };
             if (resStr[resStr.size() - 1] == '\n')
             {
-                std::cout << "Json FastWriter得到的结果是有换行的" << std::endl;
+                // std::cout << "Json FastWriter得到的结果是有换行的" << std::endl;
                 resStr = resStr.substr(0, resStr.size() - 1);
             }
  
             std::cout << "将结果写入缓存" << std::endl;
             CacheManager::GetInstance()->getCache(atoi(name)).addElement(_msg, resStr);
-            cout << "线程 [" << name << "] 当前缓存如下：" << endl;
-            CacheManager::GetInstance()->getCache(atoi(name)).getCache();
         }
         else
         {
             std::cout << "缓存命中" << std::endl;
         }
+        // 不管返回的Json字符串有没有换行，都给他加上换行
         if (resStr[resStr.size() - 1] != '\n')
         {
-            std::cout << "没有换行，resStr.size() = " << resStr.size() << std::endl;
             resStr += "\n";
         }
         else
         {
-            std::cout << "有换行，直接发送" << std::endl;
             resStr[resStr.size() - 1] = '\n';
         }
-        std::cout << "服务器发送的信息大小：size() = " << resStr.size() << std::endl;
         _con->sendToLoop(resStr);
     }
 

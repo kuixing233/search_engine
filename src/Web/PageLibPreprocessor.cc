@@ -37,7 +37,7 @@ void PageLibPreprocessor::buildPageAndOffsetLib()
             if (!bIt.second)
             {
                 // std::cout << "网页：[" << xmlFile << "] 文章 [" << item._title << "] 插入网页库失败: " << "filter ++ " << filter << std::endl;
-                // 两篇文章相似度过高插入失败
+                // 网页去重，两篇文章相似度过高会插入失败
                 filter++;
                 continue;
             }

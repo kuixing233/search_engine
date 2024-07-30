@@ -16,7 +16,7 @@ class SearchEngine
 public:
     SearchEngine(size_t threadNum, size_t queSize,
                  const string &ip, unsigned short port)
-        : _pool(threadNum, queSize), _tcpserver(ip, port), _tfd((std::bind(&CacheManager::periodicUpdateCaches, CacheManager::GetInstance())))
+        : _pool(threadNum, queSize), _tcpserver(ip, port), _tfd((std::bind(&CacheManager::periodicUpdateCaches2, CacheManager::GetInstance())))
     {
         LogInfo("SearchEngine Start on IP: %s Port: %d", ip.c_str(), port);
     }
@@ -30,9 +30,8 @@ public:
         using namespace std::placeholders;
         _pool.start();
 
-        // Thread th(std::bind(&TimerFd::start, &_tfd), "缓存更新线程");
-        // th.start();
 
+        // 缓存更新的定时器任务
         _pool.addTask(std::bind(&TimerFd::start, &_tfd));
 
         _tcpserver.setAllCallback(std::bind(&SearchEngine::onConnection, this, _1),
